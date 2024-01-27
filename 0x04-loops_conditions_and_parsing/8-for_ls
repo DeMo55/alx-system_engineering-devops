@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-# ls using for loop
+# The content of the current directory
 
-for file in *; do
-  echo "$file" | cut -d '-' -f 2;
+command=$(ls -1)
+for i in $command;
+do
+    echo "$i" | cut -d '-' -f 2
 done
