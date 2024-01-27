@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-# To infinity and beyond
+# displays To infinity and beyond indefinitely.
+# shellcheck disable=SC2009
 
-while true; do
-  echo "To infinity and beyond"
-  sleep 2
+while ((1))
+do
+    echo "To infinity and beyond"
+    sleep 2
 done

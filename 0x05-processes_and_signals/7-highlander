@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-# Highlander
+# stop To infinity and beyond indefinitely.
+# shellcheck disable=SC2009
 
-# print I am invincible!!! when receiving a SIGTERM signal
-trap "echo I am invincible!!!" SIGTERM
-
-while true; do
-  echo "To infinity and beyond"
-  sleep 2
-done;
+STATUS=0
+while [ $STATUS = 0 ]
+do
+    echo "To infinity and beyond"
+    sleep 2
+    trap 'echo "I am invincible!!!"' SIGTERM
+    STATUS=$?
+done
